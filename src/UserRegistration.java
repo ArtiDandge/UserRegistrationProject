@@ -19,7 +19,7 @@ public class UserRegistration {
             System.out.println("'"+mail+"'"+" validation success !");
             return true;
         }else {
-            System.out.println("'"+mail+"'"+" validation success !");
+            System.out.println("'"+mail+"'"+" validation unsuccessful !");
             return false;
         }
     }
@@ -29,18 +29,19 @@ public class UserRegistration {
             System.out.println("'"+number+"'"+" validation success !");
             return true;
         } else {
-            System.out.println("'"+number+"'"+" validation success !");
+            System.out.println("'"+number+"'"+" validation unsuccessful !");
             return false;
         }
     }
     public static boolean validatePassword(String password){
         String passwordExp1 = "[a-zA-Z]{8,}";   //password should have minimum 8 characters
         String passwordExp2 = ".*[A-Z].*";      //Rule 2: password should have atleast one Upper case
-        if (password.matches(passwordExp1) && password.matches(passwordExp2)){
+        String passwordExp3 = ".*[0-9].*";      //Rule 3: password should have atleast one numeric
+        if (password.matches(passwordExp1) && password.matches(passwordExp2) && password.matches(passwordExp3)){
             System.out.println("'"+password+"'"+" validation success !");
             return true;
         }else {
-            System.out.println("'"+password+"'"+" validation success !");
+            System.out.println("'"+password+"'"+" validation unsuccessful !");
             return false;
         }
     }
