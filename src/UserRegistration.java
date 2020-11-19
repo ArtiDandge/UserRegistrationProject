@@ -23,6 +23,16 @@ public class UserRegistration {
             return false;
         }
     }
+    public static boolean validateMobileNumber(String number) {
+        String mobExp = "([0]{1}\\s|[+][9]{1}[1]{1}\\s)?[6-9]{1}[0-9]{9}";
+        if (number.matches(mobExp)) {
+            System.out.println("'"+number+"'"+" validation success !");
+            return true;
+        } else {
+            System.out.println("'"+number+"'"+" validation success !");
+            return false;
+        }
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Project ");
         Scanner sc = new Scanner(System.in);
@@ -35,5 +45,8 @@ public class UserRegistration {
         System.out.println("Enter Mail address");
         String email = sc.nextLine();
         System.out.println(validateEmail(email));
+        System.out.println("Enter Mobile Number");
+        String mobileNo = sc.nextLine();
+        System.out.println(validateMobileNumber(mobileNo));
     }
 }
