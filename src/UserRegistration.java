@@ -34,10 +34,12 @@ public class UserRegistration {
         }
     }
     public static boolean validatePassword(String password){
-        String passwordExp1 = "[a-zA-Z]{8,}";   //password should have minimum 8 characters
-        String passwordExp2 = ".*[A-Z].*";      //Rule 2: password should have atleast one Upper case
-        String passwordExp3 = ".*[0-9].*";      //Rule 3: password should have atleast one numeric
-        if (password.matches(passwordExp1) && password.matches(passwordExp2) && password.matches(passwordExp3)){
+//        String passwordExp1 = "[a-zA-Z]{8,}";   //Rule 1: password should have minimum 8 characters
+//        String passwordExp2 = ".*[A-Z].*";      //Rule 2: password should have atleast one Upper case
+//        String passwordExp3 = ".*[0-9].*";      //Rule 3: password should have atleast one numeric
+//        String passwordExp4 = "[@#$%^&+=]{1}";  //Rule 4: password should have exactly one special character
+        String passExp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.+[@#$%^&+=]{1}).{8,}$";
+        if (password.matches(passExp)){
             System.out.println("'"+password+"'"+" validation success !");
             return true;
         }else {
