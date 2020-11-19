@@ -18,5 +18,8 @@ public class UserRegistration {
         System.out.println("Enter First name ");
         String first_name = sc.nextLine();
         System.out.println(validateFirstName(first_name));
+        System.out.println("Enter Last name ");
+        String last_name = sc.nextLine();
+        System.out.println(validateFirstName(last_name));
     }
 }
