@@ -33,6 +33,17 @@ public class UserRegistration {
             return false;
         }
     }
+    public static boolean validatePassword(String password){
+        String passwordExp1 = "[a-zA-Z]{8,}";   //password should have minimum 8 characters
+
+        if (password.matches(passwordExp1)){
+            System.out.println("'"+password+"'"+" validation success !");
+            return true;
+        }else {
+            System.out.println("'"+password+"'"+" validation success !");
+            return false;
+        }
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Project ");
         Scanner sc = new Scanner(System.in);
@@ -48,5 +59,9 @@ public class UserRegistration {
         System.out.println("Enter Mobile Number");
         String mobileNo = sc.nextLine();
         System.out.println(validateMobileNumber(mobileNo));
+        System.out.println(validateMobileNumber(mobileNo));
+        System.out.println("Enter Password");
+        String password = sc.nextLine();
+        System.out.println(validatePassword(password));
     }
 }
