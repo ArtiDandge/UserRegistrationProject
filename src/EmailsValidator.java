@@ -33,7 +33,8 @@ public class EmailsValidator {
 //        emails.add("abc@gmail.com.aa.au");
 
         String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z0-9]{2,6}$";
-
+        //String regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z.-]+$";
+        //String regex = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z])*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}(.[a-zA-Z]{2})*$"; //class regex
         Pattern pattern = Pattern.compile(regex);
 
         for (String email : emails) {
